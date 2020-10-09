@@ -1,0 +1,26 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("napiš poloměr v cm");
+            string polomer = (Console.ReadLine());
+            int polomer1 = int.Parse(polomer);
+            double pí= 3.1415;
+            double obsah = pí * polomer1 * polomer1;
+            double obvod = pí * polomer1 * 2;
+            obsah = Math.Round(obsah, 2);
+            obvod = Math.Round(obvod, 2);
+            Console.WriteLine("\n"+"obvod=" + obvod+"cm");
+            Console.WriteLine("\n" + "obsah" + obsah+"cm2");
+            Console.ReadLine();
+
+
+
+
+        }
+    }
+}
