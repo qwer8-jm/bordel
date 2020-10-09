@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cislo1 = 0;
+            Console.WriteLine("zadej číslo");
+            string cislo = Console.ReadLine();
+            int cislo5 = int.Parse(cislo);
+
+            for (int i = 0; i <= cislo5; i++)
+            {
+                cislo1 = cislo1 + 1;
+                int vysledek = cislo5 % cislo1;
+
+                if (vysledek == 0)
+                {
+                    Console.Write(cislo1 +";") ;
+                }
+            }
+            
+            
+            Console.ReadLine();
+
+        }
+    }
+}
