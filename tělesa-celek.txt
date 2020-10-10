@@ -14,7 +14,7 @@ namespace ConsoleApp7
             double pí = 3.1415;
             Console.WriteLine("AHOJ");
         start1:
-            Console.WriteLine("kruh;válec;krychle;kvádr");
+            Console.WriteLine("kruh;válec;krychle;kvádr;konec");
 
             string zadání = (Console.ReadLine());
             if (zadání == "kruh")
@@ -32,6 +32,10 @@ namespace ConsoleApp7
             else if (zadání == "kvádr")
             {
                 goto kvádr1;
+            }
+            else if (zadání == "konec")
+            {
+                goto vypnout1;
             }
             else
             {
@@ -102,6 +106,9 @@ namespace ConsoleApp7
             Console.ReadKey();
             Console.WriteLine("\n" + "\n" + "Teď můžeš znova, ale jiný útvar, nebo jiné rozměry kvádru.");
             goto start1;
+            
+        vypnout1:
+            Console.ReadKey();
 
         }
     }
