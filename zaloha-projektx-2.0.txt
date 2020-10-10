@@ -1,0 +1,110 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double pí = 3.1415;
+            Console.WriteLine("AHOJ");
+        start1:
+            Console.WriteLine("kruh;válec;krychle;kvádr");
+
+            string zadání = (Console.ReadLine());
+            if(zadání=="kruh")
+            {
+                goto kruh1;   
+            }
+            else if (zadání == "válec")
+            {
+                goto válec;
+            }
+            else if
+            {
+                goto čtverec;
+            }
+            else if (zadání=="kvádr")
+            {
+                goto kvádr1;
+            }
+            else
+            {
+                goto start1;
+            }
+
+        kruh1:
+            Console.WriteLine("Napis poloměr kruhu(v cm).");
+            string polomer = (Console.ReadLine());
+            int polomercislo = int.Parse(polomer);
+            double vysledekkruhobsah = polomercislo * polomercislo * pí;
+            vysledekkruhobsah = Math.Round(vysledekkruhobsah, 2);
+            double vysledekkruhobvod = 2 * polomercislo * pí;
+            vysledekkruhobvod = Math.Round(vysledekkruhobvod, 2);
+            Console.WriteLine("obvod tohoto kruhu=" + "\n" + vysledekkruhobvod + "cm");
+            Console.WriteLine("\n" + "obsah tohoto kruhu=" + "\n" + vysledekkruhobsah + "cm2");
+            Console.WriteLine("Teď můžeš znova, ale jiný útvar, nebo jiný rozměr kruhu.");
+            goto start1;
+
+
+
+
+        válec:
+            Console.WriteLine("Napis poloměr podstavy válce(v cm).");
+            string polomerV = (Console.ReadLine());
+            int polomercisloV = int.Parse(polomerV);
+            Console.WriteLine("Napiš výšku válce(vcm).");
+            string výškaV = (Console.ReadLine());
+            int výškacisĺoV = int.Parse(výškaV);
+            double vysledekpovrchV = 2 * polomercisloV * polomercisloV * pí + 2 * polomercisloV * pí * výškacisĺoV;
+            vysledekpovrchV = Math.Round(vysledekpovrchV, 2);
+            double vysledekobsahV = polomercisloV * polomercisloV * pí * výškacisĺoV;
+            vysledekobsahV = Math.Round(vysledekobsahV, 2);
+            Console.WriteLine("Povrch tohoto válce =" + "\n" + vysledekpovrchV + "cm2");
+            Console.WriteLine("\n" + "Objem tohoto válce=" + "\n" + vysledekobsahV + "cm3");
+            Console.ReadKey();
+            Console.WriteLine("Teď můžeš znova, ale jiný útvar, nebo jiné rozměry válce.");
+            goto start1;
+
+
+
+        čtverec:
+            Console.WriteLine("Napiš stranu krychle(v cm)");
+            string stranaK = (Console.ReadLine());
+            int stranacisloK = int.Parse(stranaK);
+            int vysledekpovrchK = stranacisloK * stranacisloK * 6;
+            int vysledekobsahK = stranacisloK * stranacisloK * stranacisloK;
+            Console.WriteLine("Povrch této krychle =" + "\n" + vysledekpovrchK + "cm2");
+            Console.WriteLine("\n" + "Objem této krychle =" + "\n" + vysledekobsahK + "cm3")
+            Console.ReadKey();
+            Console.WriteLine("Teď můžeš znova, ale jiný útvar, nebo jiné rozměry krychle.");
+            goto start1;
+
+        kvádr1:
+            Console.WriteLine("Napiš první stranu kvádru(v cm)");
+            string stranaK1 = (Console.ReadLine());
+            int stranacisloK1 = int.Parse(stranaK1);
+            Console.WriteLine("Napiš druhou stranu kvádru(v cm)");
+            string stranaK2 = (Console.ReadLine());
+            int stranacisloK2 = int.Parse(stranaK2);
+            Console.WriteLine("Napiš třetí stranu kvádru(v cm)");
+            string stranaK3 = (Console.ReadLine());
+            int stranacisloK3 = int.Parse(stranaK3);
+            int vysledekpovrchK1 = 2 * stranacisloK1 * stranacisloK2 + 2 * stranacisloK2 * stranacisloK3 + 2 * stranacisloK3 * stranacisloK1;
+            int vysledekobjemK1 = stranacisloK1 * stranacisloK2 * stranacisloK3;
+            Console.WriteLine("Povrch tohoto kvádru =" + "\n" + vysledekpovrchK1 + "cm2");
+            Console.WriteLine("\n" + "Objem tohoto kvádru =" + "\n" + vysledekobjemK1 + "cm3")
+            Console.ReadKey();
+            Console.WriteLine("Teď můžeš znova, ale jiný útvar, nebo jiné rozměry kvádru.");
+            goto start1;
+
+
+
+
+
+            Console.ReadLine();
+        
+        }
+    }
+}
