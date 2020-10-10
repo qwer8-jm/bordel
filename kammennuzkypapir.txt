@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int scorehr = 0;
+            int scoreco = 0;
+        label4:
+            Random cislo = new Random();
+            int cislo0 = cislo.Next(1, 4);
+            int cislo1 = 1;
+            int cislo2 = 2;
+            int cislo3 = 3;
+          
+            Console.WriteLine("KÁMEN, NŮŽKY, NEBO PAPÍR?");
+            string hrac = (Console.ReadLine());
+            if (hrac == "nůžky")
+            {
+                goto label1;
+            }
+            else if (hrac =="papír")
+            {
+                goto label1;
+            }
+            else if (hrac =="kámen")
+            {
+                goto label1;
+            }
+            else
+            {
+                goto label4;
+            }
+        label1:
+            if (cislo0 == cislo1)
+            {
+                scorehr++;
+                scoreco++;
+                goto label2;
+            }
+            else if (cislo0==cislo2)
+            {
+                scoreco = scoreco + 1;
+                goto label2;
+            }
+            else if (cislo0==cislo3)
+            {
+                scorehr++;
+            }
+
+        label2:
+            Console.WriteLine("tvůj výsledek=>  "+scorehr + " : " + scoreco+"  <=výsledek konzole"+"\n");
+            goto label4;
+        }
+    }
+}
