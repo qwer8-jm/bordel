@@ -1,0 +1,54 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double pí=3,1415;
+            Console.WriteLine("AHOJ"+"\n"+"kruh;válec;čtverec;kdychle;kvádr");
+
+            string zadání = (Console.ReadLine());
+            if(zadání=="kruh")
+            {
+                goto kruh1;   
+            }
+            if else (zadání == "válec")
+                         //Console.ReadLine();
+
+            {
+                goto válec;
+            }
+            else
+            {
+                goto čtverec;
+            }
+
+        kruh1:
+            Console.WriteLine("Napis poloměr kruhu(v cm).");
+            string polomer = (Console.ReadLine());
+            int polomercislo = int.Parse(polomer);
+            double vysledekkruhobsah = polomercislo * polomercislo * pí;
+            vysledekkruhobsah = Math.Round(vysledekkruhobsah, 2);
+            double vysledekkruhobvod = 2 * polomercislo * pí;
+            vysledekkruhobvod = Math.Round(vysledekkruhobvod, 2);
+            Console.WriteLine("obvod tohoto kruhu=" + "\n" + vysledekkruhobvod + "cm");
+            Console.WriteLine("\n" + "obsah tohoto kruhu=" + "\n" + vysledekkruhobsah + "cm2");
+
+
+
+
+
+        válec:
+            Console.WriteLine("Napis poloměr kruhu.");
+
+        čtverec:
+
+
+            Console.ReadLine();
+        
+        }
+    }
+}
