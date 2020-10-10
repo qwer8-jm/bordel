@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("mocninator");
+            Console.WriteLine("==========");
+            Console.WriteLine("napiš základ mocniny");
+            double cisloz = double.Parse(Console.ReadLine());
+            Console.WriteLine("napiš exponent");
+            double cisloe = double.Parse(Console.ReadLine());
+            double vysledek = cisloz;
+            
+
+            for (int cislo = 0; cislo < (cisloe-1);cislo++)
+            {
+                vysledek = vysledek * cisloz;
+            }
+            Console.WriteLine("vysledek je:"+vysledek);
+            Console.ReadKey();
+
+        }
+    }
+}
