@@ -1,0 +1,93 @@
+using System;
+using System.Timers;
+
+namespace TimerExample
+{
+    class Program
+    {
+       
+        static void Main(string[] args)
+        {
+
+
+
+            Console.Write("     Ahoj,na začátek mám menší otázku, chceš si změnit barevné nastavení?   ANO/NE"+"\n"+"\n");
+            string text1 = (Console.ReadLine());
+            if (text1 =="ano")
+                goto label1;
+            else
+                goto label11;
+        label1:
+            Console.WriteLine("     vyber si barvu písma: černou; šedou; bílou; modrou; zelenou; žlutou; cyan; magenta");
+            string barva = (Console.ReadLine());
+
+
+
+            if (barva == "černou")
+                Console.ForegroundColor = ConsoleColor.Black;
+            if (barva == "šedou")
+                Console.ForegroundColor = ConsoleColor.Gray;
+            if (barva == "bílou")
+                Console.ForegroundColor = ConsoleColor.White;
+            if (barva == "modrou")
+                Console.ForegroundColor = ConsoleColor.Blue;
+            if (barva == "zelenou")
+                Console.ForegroundColor = ConsoleColor.Green;
+            if (barva == "žlutou")
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            if (barva == "cyan")
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            if (barva == "magenta")
+                Console.ForegroundColor = ConsoleColor.Magenta;
+            else
+                goto label2;
+
+            label2:
+            Console.WriteLine("     vyber si barvu pozadí: černou; šedou; bílou; modrou; zelenou; žlutou; cyan; magenta");
+            string barva1 = (Console.ReadLine());
+
+
+            if (barva1 == "černou")
+                Console.BackgroundColor = ConsoleColor.Black;
+            if (barva1 == "šedou")
+                Console.BackgroundColor = ConsoleColor.Gray;
+            if (barva1 == "bílou")
+                Console.BackgroundColor = ConsoleColor.White;
+            if (barva1 == "modrou")
+                Console.BackgroundColor = ConsoleColor.Blue;
+            if (barva1 == "zelenou")
+                Console.BackgroundColor = ConsoleColor.Green;
+            if (barva1 == "žlutou")
+                Console.BackgroundColor = ConsoleColor.Yellow;
+            if (barva1 == "cyan")
+                Console.BackgroundColor = ConsoleColor.Cyan;
+            if (barva1 == "magenta")
+                Console.BackgroundColor = ConsoleColor.Magenta;
+            else
+                goto label11;
+            
+        label22:
+            Console.Clear();
+            Console.WriteLine("    Jsi s tím takhle spokojený?   ANO/NE");
+            string spokojenost=(Console.ReadLine());
+            if (spokojenost == "ano")
+                goto label11;
+            if (spokojenost == "ne")
+                goto label1;
+            else
+                goto label11;
+
+        label11:
+            Console.WriteLine("zde program končí");
+            Console.ReadKey();
+
+            //Console.BackgroundColor = ConsoleColor.Cyan;
+            //Console.ForegroundColor = ConsoleColor.Black;
+            //Console.Clear();
+            //Console.ReadLine();
+
+        }
+
+        
+    }
+} 
