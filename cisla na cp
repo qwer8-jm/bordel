@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        label4:
+            int cislo1 = 1;
+            Console.Write("chceš znát číslo?");
+            Console.WriteLine ("\n");
+            string anone = Console.ReadLine();
+            if (anone == "ano")
+            {
+                goto label1;
+            }
+            if (anone == "ne")
+            {
+                goto label3;
+            }
+            else
+            {
+                goto label4;
+            }
+             
+        label1:
+            if (cislo1 == 720)
+            {
+                goto label2;
+            }
+            else
+            {
+                Console.WriteLine (cislo1);
+                cislo1++;
+                goto label1;
+            }
+
+        label2:
+
+            Console.WriteLine("\n" + "Hledané číslo je" + "\n" + cislo1);
+        label3:
+            Console.WriteLine("Tak ne no :D");
+            Console.ReadLine();
+
+        }
+    }
+}
