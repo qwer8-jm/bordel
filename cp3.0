@@ -1,0 +1,64 @@
+using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int hahah = 0;
+            int cislo1 = 1;
+        label4:
+            
+            Console.Write("chceš znát číslo?");
+            Console.WriteLine("\n");
+            string anone = Console.ReadLine();
+            if (anone == "ano")
+                goto label1;
+            if (anone == "ne")
+                goto label3;
+            else
+                goto label4;
+
+        label1:
+            if (cislo1 == 720)
+                goto label2;
+            else
+            {
+                Console.WriteLine(cislo1);
+                cislo1++;
+                goto label1;
+            }
+
+        label3:
+            Console.WriteLine("Tak ne no :D");
+            goto label5;
+
+        label2:
+
+            Console.WriteLine("\n" + "Hledané číslo je" + "\n" + cislo1);
+            cislo1++;
+            Console.WriteLine("\n" + "další číslo je" + "\n" + cislo1);
+            Console.ReadLine();
+            Console.WriteLine("\n" + "\n"+"Dělitelé tohoto čísla jsou:"+"\n");
+
+            for (int i = 0; i <= cislo1; i++)
+            {          
+                hahah = hahah+1;
+                int vysledek = cislo1 % hahah;
+                if (vysledek == 0)
+                {
+                    Console.Write(hahah + ";");
+                }
+            }
+        label5:
+            Console.Read();
+
+        }
+    }
+}
